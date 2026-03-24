@@ -34,16 +34,3 @@ FastAPI, Ollama, ChromaDB를 활용하여 구축한 **로컬 LLM 기반 비동�
 3. **Retrieval (RAG):** RAG 모듈 호출 시, 입력된 텍스트를 임베딩하고 ChromaDB에서 관련 문서를 추출
 4. **LLM Generation:** 구성된 프롬프트와 컨텍스트를 로컬 Ollama 서버로 전달하여 답변 생성
 5. **Response:** 결과를 Client에게 반환 (동기/비동기 스트리밍 지원) 및 Redis에 대화 내역 업데이트
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Python 3.9+
-- [Ollama](https://ollama.ai/) 설치
-- Redis 서버 실행 (Port: 6379)
-
-### Model Pull (Ollama)
-서버를 실행하기 전에 필요한 모델을 로컬에 다운로드합니다.
-```bash
-ollama pull gemma3:1b
-ollama pull nomic-embed-text
